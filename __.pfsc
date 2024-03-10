@@ -1,0 +1,24 @@
+deps = {
+    "gh.pfsc_example.min1": "v0.1.0",
+    "gh.pfsc_example.min3": "v0.1.0",
+}
+
+
+from gh.pfsc_example.min1 import Pf
+from gh.pfsc_example.min3 import W1
+
+deduc V1 of W1.B1 {
+
+    asrt C1 {
+        sy = "$C1@$"
+    }
+    
+    asrt C2 {
+        sy = "$C2@$"
+    }
+
+    meson = "
+    From Pf.R get C2.
+    Have W1.B1 by C1 and C2.
+    "
+}
